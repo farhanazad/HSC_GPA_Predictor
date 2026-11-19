@@ -84,7 +84,8 @@ y_pred=rf_pipeline.predict(x_test)
 rmse=np.sqrt(mean_squared_error(y_test,y_pred))
 r2=r2_score(y_test,y_pred)
 
-
+print("RMSE : ",rmse)
+print("R2 Score : ",r2)
 with open("students_rf_pipeline.pkl","wb") as f:
     pickle.dump(rf_pipeline,f)
 
